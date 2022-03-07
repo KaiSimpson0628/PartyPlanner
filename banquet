@@ -1,0 +1,11 @@
+public class Banquet {
+	
+public static void main(String[] args) {
+	
+int numPPL;
+int[][] pplfrCo = new int[16][20];
+Person[][] bt = new Person[10][10];
+Person p1 = new Person(3, "Kai",  13);
+System.out.print(p1);
+}
+}
