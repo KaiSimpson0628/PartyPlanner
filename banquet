@@ -3,12 +3,22 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.*;
 
+
 public class Banquet {
 	
-public static void main(String[] args) {
-	
+public static void main(String[] args) throws IOException {
+	String row;
 	ArrayList<String> people = new ArrayList<String>();
-try {
+	BufferedReader csvReader = new BufferedReader(new FileReader("names.csv"));
+while ((row = csvReader.readLine()) != null) {
+  String[] data = row.split(",");
+  System.out.println(data[1]);
+  
+  // do something with the data
+}
+csvReader.close();
+
+/*try {
 File myObj = new File("names.csv");
 Scanner scan = new Scanner(myObj);
 for (int i = 0; i<90; i++) 
@@ -16,15 +26,21 @@ for (int i = 0; i<90; i++)
 	String whatever = scan.nextLine();
 	int personID = Integer.valueOf(whatever.substring(0,1));
 	people.add(whatever);
-	System.out.println(people);
-	System.out.println(personID);
+	//System.out.println(personID);
 }
+
+for (int j = 0; j<90; j++) 
+{
+System.out.println(people.get(j) + "\n");
+} //close for loop
 	}
 catch (FileNotFoundException e) {
 System.out.println("error");
 e.printStackTrace();
 }
+*/
 
+/*
 int numPPL;
 int[][] pplfrCo = new int[16][20];
 Person[][] bt = new Person[10][10];
@@ -48,6 +64,6 @@ Person p9 = new Person(9, "Jofree",  12);
 System.out.println(p9);
 Person p10 = new Person(10, "Marcus",  3);
 System.out.println(p10);
-
+*/
 }
 }
