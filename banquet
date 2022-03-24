@@ -8,11 +8,17 @@ public class Banquet {
 	
 public static void main(String[] args) throws IOException {
 	String row;
+	Integer[][]tables = new Integer[10][10];
 	ArrayList<String> people = new ArrayList<String>();
+	ArrayList<People> partylist = new ArrayList<People>();
 	BufferedReader csvReader = new BufferedReader(new FileReader("names.csv"));
 while ((row = csvReader.readLine()) != null) {
   String[] data = row.split(",");
   System.out.println(data[1]);
+  Integer.parseInt(data[3]);
+ Integer.parseInt(data[0]);
+People p1 = new People(Integer.parseInt(data[0]), data[1], Integer.parseInt(data[3]));
+partylist.add(p1);
   
   // do something with the data
 }
@@ -40,7 +46,17 @@ e.printStackTrace();
 }
 */
 
-/*
+
+for (int i; int i>=90; i++) {
+	people.get(10) = tables[1]
+	if (people(10) companyID = people(10) comapnyID) {
+	people(10) = people(10) = tables[1];
+	else { null;
+	} 
+}
+tables[1] + 
+} //trying to get so no 2 people from same company are at same table and if they ar it will get 10 new people until there is no repeats
+
 int numPPL;
 int[][] pplfrCo = new int[16][20];
 Person[][] bt = new Person[10][10];
@@ -64,6 +80,8 @@ Person p9 = new Person(9, "Jofree",  12);
 System.out.println(p9);
 Person p10 = new Person(10, "Marcus",  3);
 System.out.println(p10);
+System.out.print(tables);
+
 */
 }
 }
